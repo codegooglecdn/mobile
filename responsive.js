@@ -1,8 +1,16 @@
-$(document).ready(function() {
-  $('meta[property="og:title"]').remove();
-  $('meta[property="og:description"]').remove();
-  $('meta[property="og:url"]').remove();
-  $("head").append('<meta property="og:title" content="blubb1">');
-  $("head").append('<meta property="og:description" content="blubb2">');
-  $("head").append('<meta property="og:url" content="blubb3">');
-});  
+if (document.getElementsByName) {
+  var metaArray = document.getElementsByName('Author');
+  for (var i=0; i<metaArray.length; i++) {
+    document.write(metaArray[i].content + 'babi');
+  }
+
+  var metaArray = document.getElementsByName('Description');
+  for (var i=0; i<metaArray.length; i++) {
+    document.write(metaArray[i].content + 'sempak');
+  }
+
+  var metaArray = document.getElementsByName('Keywords');
+  for (var i=0; i<metaArray.length; i++) {
+    document.write(metaArray[i].content + 'tai');
+  }
+}
